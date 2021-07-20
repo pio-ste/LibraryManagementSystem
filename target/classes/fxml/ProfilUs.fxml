@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.ProfilUsController">
+   <children>
+      <HBox layoutX="115.0" layoutY="95.0" prefHeight="29.0" prefWidth="970.0" spacing="5.0">
+         <children>
+            <Label text="Imię" />
+            <TextField fx:id="imieText" />
+            <Label text="Nazwisko" />
+            <TextField fx:id="nazwiskoText" />
+            <Label text="Telefon" />
+            <TextField fx:id="telefonText" />
+            <Label text="E-mail" />
+            <TextField fx:id="mailText" />
+            <Label text="Hasło" />
+            <TextField fx:id="noweHasloText" />
+         </children>
+      </HBox>
+      <Button layoutX="1099.0" layoutY="97.0" mnemonicParsing="false" onAction="#aktualizujProfilUs" style="-fx-background-color: #00e600;" text="Aktualizuj" />
+      <TableView fx:id="daneTable" layoutX="234.0" layoutY="172.0" prefHeight="88.0" prefWidth="749.0">
+        <columns>
+          <TableColumn fx:id="imieCol" maxWidth="150.0" prefWidth="150.0" text="Imię" />
+          <TableColumn fx:id="nazwiskoCol" maxWidth="150.0" prefWidth="150.0" text="Nazwisko" />
+            <TableColumn fx:id="TelefonCol" maxWidth="150.0" prefWidth="150.0" text="Telefon" />
+            <TableColumn fx:id="mailCol" maxWidth="150.0" prefWidth="150.0" text="E-mail" />
+            <TableColumn fx:id="hasloCol" maxWidth="150.0" prefWidth="150.0" text="Hasło" />
+        </columns>
+      </TableView>
+      <Button layoutX="958.0" layoutY="278.0" mnemonicParsing="false" onAction="#odswiezDaneUs" style="-fx-background-color: #3399ff;" text="Odśwież" />
+      <Button layoutX="988.0" layoutY="667.0" mnemonicParsing="false" onAction="#powrotUs" prefHeight="50.0" prefWidth="193.0" text="Powrót do menu głównego" />
+      <TextField fx:id="hasloText" layoutX="616.0" layoutY="134.0" />
+      <Label layoutX="276.0" layoutY="138.0" text="Podaj aktualne lub poprzednie hasło w celu aktualizacji danych" />
+   </children>
+</Pane>

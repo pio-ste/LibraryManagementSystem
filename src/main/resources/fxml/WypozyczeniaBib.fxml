@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.WypozyczeniaBibController">
+   <children>
+      <HBox layoutX="13.0" layoutY="459.0" prefHeight="32.0" prefWidth="1178.0" spacing="20.0">
+         <children>
+            <Label text="Numer karty bibliotecznej" />
+            <TextField fx:id="NrKarty" />
+            <Label text="Numer egzemplarza" />
+            <TextField fx:id="NrEgzemplarza" />
+            <Label text="Data wypożyczenia/zwrotu" />
+            <DatePicker fx:id="DataWypZwr" />
+            <Button mnemonicParsing="false" onAction="#wypozyczenie" text="Wypozyczenie" />
+            <Button mnemonicParsing="false" onAction="#zwrot" text="Zwrot" />
+         </children>
+      </HBox>
+      <HBox layoutX="3.0" layoutY="49.0" prefHeight="32.0" prefWidth="1193.0" spacing="10.0">
+         <children>
+            <Label text="idKsiazki" />
+            <TextField fx:id="idKsiazkiText" />
+            <Label text="Autor" />
+            <TextField fx:id="AutorText" />
+            <Label text="Tytuł" />
+            <TextField fx:id="TytulText" prefHeight="25.0" prefWidth="185.0" />
+            <Label text="Wydwanictwo" />
+            <TextField fx:id="WydawnictwoText" />
+            <Label text="Kategoria" />
+            <TextField fx:id="KategoriaText" />
+            <Button mnemonicParsing="false" onAction="#szukajKsiazke" text="Szukaj" />
+         </children>
+      </HBox>
+      <Label layoutX="535.0" layoutY="14.0" text="Wyszukaj książkę" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="985.0" layoutY="676.0" mnemonicParsing="false" onAction="#powrotBib" prefHeight="50.0" prefWidth="193.0" text="Powrót do menu głównego" />
+      <TableView fx:id="KsiazkaTable" layoutX="167.0" layoutY="119.0" prefHeight="152.0" prefWidth="945.0">
+        <columns>
+            <TableColumn fx:id="idKsiazkiCol" prefWidth="75.0" text="idKsiazki" />
+          <TableColumn fx:id="AutorCol" maxWidth="150.0" prefWidth="150.0" text="Autor" />
+            <TableColumn fx:id="TytulCol" maxWidth="150.0" prefWidth="150.0" text="Tytuł" />
+            <TableColumn fx:id="WydawCol" maxWidth="150.0" prefWidth="150.0" text="Wydawnictow" />
+            <TableColumn fx:id="KategCol" prefWidth="150.0" text="Kategoria" />
+            <TableColumn fx:id="JezykCol" maxWidth="150.0" prefWidth="150.0" text="Język" />
+            <TableColumn fx:id="DataWydCol" prefWidth="119.0" text="Data wydania" />
+        </columns>
+      </TableView>
+      <TableView fx:id="EgzemplarzeTable" layoutX="448.0" layoutY="319.0" prefHeight="133.0" prefWidth="445.0">
+        <columns>
+          <TableColumn fx:id="idEgzemplarzaCol" prefWidth="89.0" text="idEgzemplarza" />
+          <TableColumn fx:id="NumerEgzCol" prefWidth="101.0" text="Numer" />
+            <TableColumn fx:id="StanEgzCol" prefWidth="87.0" text="Stan" />
+            <TableColumn fx:id="RodzajCol" prefWidth="90.0" text="Rodzaj" />
+            <TableColumn fx:id="idKsiazkiEgzCol" prefWidth="76.0" text="IdKsiazki" />
+        </columns>
+      </TableView>
+      <HBox layoutX="512.0" layoutY="284.0" prefHeight="27.0" prefWidth="316.0" spacing="10.0">
+         <children>
+            <Label text="idKsiazki" />
+            <TextField fx:id="idKsiazkiText2" prefHeight="25.0" prefWidth="185.0" />
+            <Button mnemonicParsing="false" onAction="#szukajEgzemplarz" text="Szukaj" />
+         </children>
+      </HBox>
+      <TableView fx:id="WypozyczeniaTable" layoutX="485.0" layoutY="498.0" prefHeight="133.0" prefWidth="371.0">
+        <columns>
+          <TableColumn fx:id="NumerKartCol" prefWidth="105.0" text="Numer karty" />
+          <TableColumn fx:id="DataWypCol" prefWidth="138.0" text="Data wypozyczenia" />
+            <TableColumn fx:id="NumerEgzCol1" prefWidth="127.0" text="Numer egzmeplarza" />
+        </columns>
+      </TableView>
+      <Button layoutX="985.0" layoutY="498.0" mnemonicParsing="false" onAction="#WyswietlWypozyczenia" text="Szukaj wypozyczenia" />
+      <Button layoutX="1082.0" layoutY="88.0" mnemonicParsing="false" onAction="#WyswietlWszystko" text="Wyświetl wszystkie" />
+   </children>
+</Pane>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.ProfilUsController">
+   <children>
+      <HBox layoutX="115.0" layoutY="64.0" prefHeight="29.0" prefWidth="970.0" spacing="5.0">
+         <children>
+            <Label text="Imię" />
+            <TextField />
+            <Label text="Nazwisko" />
+            <TextField />
+            <Label text="Telefon" />
+            <TextField />
+            <Label text="E-mail" />
+            <TextField />
+            <Label text="Hasło" />
+            <TextField />
+         </children>
+      </HBox>
+      <Button layoutX="1017.0" layoutY="105.0" mnemonicParsing="false" onAction="#aktualizujProfilUs" style="-fx-background-color: #00e600;" text="Aktualizuj" />
+      <TableView layoutX="150.0" layoutY="165.0" prefHeight="200.0" prefWidth="900.0">
+        <columns>
+          <TableColumn maxWidth="150.0" prefWidth="150.0" text="Imię" />
+          <TableColumn maxWidth="150.0" prefWidth="150.0" text="Nazwisko" />
+            <TableColumn maxWidth="150.0" prefWidth="150.0" text="Telefon" />
+            <TableColumn maxWidth="150.0" prefWidth="150.0" text="E-mail" />
+            <TableColumn maxWidth="150.0" prefWidth="150.0" text="Login" />
+            <TableColumn maxWidth="150.0" prefWidth="150.0" text="Hasło" />
+        </columns>
+      </TableView>
+      <Button layoutX="990.0" layoutY="388.0" mnemonicParsing="false" onAction="#odswiezDaneUs" style="-fx-background-color: #3399ff;" text="Odśwież" />
+      <Button layoutX="988.0" layoutY="717.0" mnemonicParsing="false" onAction="#powrotUs" prefHeight="50.0" prefWidth="193.0" text="Powrót do menu głównego" />
+   </children>
+</Pane>

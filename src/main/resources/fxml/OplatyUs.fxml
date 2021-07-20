@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.OplatyUsController">
+   <children>
+      <TableView fx:id="karyTable" layoutX="334.0" layoutY="91.0" prefHeight="200.0" prefWidth="606.0">
+        <columns>
+          <TableColumn fx:id="kwotaCol" prefWidth="200.0" text="Kwota" />
+          <TableColumn fx:id="opisCol" maxWidth="400.0" prefWidth="400.0" text="Temat" />
+        </columns>
+      </TableView>
+      <Button layoutX="799.0" layoutY="307.0" mnemonicParsing="false" onAction="#odswiezOplatyUs" style="-fx-background-color: #3399ff;" text="Odśwież" />
+      <Button layoutX="887.0" layoutY="307.0" mnemonicParsing="false" onAction="#wykonajPrzelew" style="-fx-background-color: #00e600;" text="Wykonaj przelew" />
+      <Button layoutX="979.0" layoutY="669.0" mnemonicParsing="false" onAction="#powrotUs" prefHeight="50.0" prefWidth="193.0" text="Powrót do menu głównego" />
+   </children>
+</Pane>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.BibliotekarzController">
+   <children>
+      <Button layoutX="1121.0" layoutY="14.0" mnemonicParsing="false" onAction="#wyloguj" prefHeight="25.0" prefWidth="65.0" style="-fx-background-color: #F70909;" text="Wyloguj" />
+      <Button layoutX="14.0" layoutY="39.0" mnemonicParsing="false" onAction="#oplatyBib" prefHeight="80.0" prefWidth="160.0" text="Opłaty" />
+      <Button defaultButton="true" layoutX="14.0" layoutY="246.0" mnemonicParsing="false" onAction="#czytelnicyBib" prefHeight="80.0" prefWidth="160.0" text="Czytelnicy" />
+      <Button layoutX="14.0" layoutY="142.0" mnemonicParsing="false" onAction="#wypozyczeniaBib" prefHeight="80.0" prefWidth="160.0" text="Wypożyczenia" />
+      <Button defaultButton="true" layoutX="14.0" layoutY="353.0" mnemonicParsing="false" onAction="#listaksiazekBib" prefHeight="80.0" prefWidth="160.0" text="Lista książek" />
+      <Button layoutX="14.0" layoutY="462.0" mnemonicParsing="false" onAction="#powiadomieniaBib" prefHeight="80.0" prefWidth="160.0" text="Powiadomienia" />
+      <ImageView fitHeight="490.0" fitWidth="370.0" layoutX="840.0" layoutY="320.0">
+         <image>
+            <Image url="@aktorzy.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="216.0" fitWidth="308.0" layoutX="316.0" layoutY="584.0">
+         <image>
+            <Image url="@bibliotekarz.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>

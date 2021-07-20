@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onDragDetected="#wyswietlDaneKier" prefHeight="800.0" prefWidth="1200.0" style="-fx-background-color: #f2e6d9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pl.biblioteka.kontrolery.PracownicyKierController">
+   <children>
+      <HBox layoutX="66.0" layoutY="32.0" prefHeight="27.0" prefWidth="1068.0" spacing="10.0">
+         <children>
+            <Label text="ID Osoby" />
+            <TextField fx:id="IDOsoby" />
+            <Label text="Imię" />
+            <TextField fx:id="imie" />
+            <Label text="Nazwisko" />
+            <TextField fx:id="nazwisko" />
+            <Label text="Nr. telefonu" />
+            <TextField fx:id="telefon" />
+            <Label text="E-mail" />
+            <TextField fx:id="mail" />
+         </children>
+      </HBox>
+      <HBox layoutX="290.0" layoutY="78.0" prefHeight="27.0" prefWidth="620.0" spacing="10.0">
+         <children>
+            <Label text="Login" />
+            <TextField fx:id="login" />
+            <Label text="Hasło" />
+            <TextField fx:id="haslo" />
+            <Label text="Stanowisko" />
+            <TextField fx:id="stanowisko" />
+         </children>
+      </HBox>
+      <TableView fx:id="TableOsoby" layoutX="24.0" layoutY="151.0" onMouseClicked="#OnMouseClickOsoby" prefHeight="216.0" prefWidth="1152.0">
+        <columns>
+            <TableColumn fx:id="idOsobyCol" prefWidth="99.0" text="idOsoby" />
+          <TableColumn fx:id="imieCol" maxWidth="150.0" prefWidth="150.0" text="Imię" />
+          <TableColumn fx:id="nazwiskoCol" maxWidth="150.0" prefWidth="150.0" text="Nazwisko" />
+            <TableColumn fx:id="telefonCol" maxWidth="150.0" prefWidth="150.0" text="Nr. telefonu" />
+            <TableColumn fx:id="mailCol" maxWidth="150.0" prefWidth="150.0" text="E-mail" />
+            <TableColumn fx:id="loginCol" maxWidth="150.0" prefWidth="150.0" text="login" />
+            <TableColumn fx:id="hasloCol" maxWidth="150.0" prefWidth="150.0" text="Hasło" />
+            <TableColumn fx:id="stanowiskoaCol" maxWidth="150.0" prefWidth="150.0" text="Stanowisko" />
+        </columns>
+      </TableView>
+      <Button layoutX="646.0" layoutY="119.0" mnemonicParsing="false" onAction="#dodajOsobe" style="-fx-background-color: #00e600;" text="Dodaj" />
+      <Button layoutX="727.0" layoutY="119.0" mnemonicParsing="false" onAction="#usunOsobe" style="-fx-background-color: #F70909;" text="Usuń" />
+      <Button layoutX="789.0" layoutY="119.0" mnemonicParsing="false" onAction="#aktualizujDane" style="-fx-background-color: #3399ff;" text="Aktualizuj dane" />
+      <Button layoutX="998.0" layoutY="727.0" mnemonicParsing="false" onAction="#powrotKier" prefHeight="50.0" prefWidth="193.0" text="Powrót do menu głównego" />
+      <Button layoutX="911.0" layoutY="119.0" mnemonicParsing="false" onAction="#wyswietlOsobe" text="Wyświetl dane" />
+      <HBox layoutX="459.0" layoutY="387.0" prefHeight="27.0" prefWidth="401.0" spacing="5.0">
+         <children>
+            <Label text="idOsoby" />
+            <TextField fx:id="idOsoby" />
+            <Label text="Zarobki" />
+            <TextField fx:id="zarobki" />
+         </children>
+      </HBox>
+      <TableView fx:id="TablePracownicy" layoutX="504.0" layoutY="432.0" onMouseClicked="#OnMouseClickPrac" prefHeight="170.0" prefWidth="312.0">
+        <columns>
+          <TableColumn fx:id="idPracowanikaCol" prefWidth="105.0" text="idPracownika" />
+          <TableColumn fx:id="zarobkiCol" prefWidth="113.0" text="Zarobki" />
+            <TableColumn fx:id="idOsobyColumn" prefWidth="97.0" text="idOsoby" />
+        </columns>
+      </TableView>
+      <Button layoutX="860.0" layoutY="432.0" mnemonicParsing="false" onAction="#zatrudnijKier" style="-fx-background-color: #00e600;" text="Zatrudnij" />
+      <Button layoutX="861.0" layoutY="471.0" mnemonicParsing="false" onAction="#zwolnijKier" prefHeight="25.0" prefWidth="61.0" style="-fx-background-color: #F70909;" text="Zwolnij" />
+      <Button layoutX="843.0" layoutY="505.0" mnemonicParsing="false" onAction="#aktualDaneKier" style="-fx-background-color: #3399ff;" text="Aktualizuj dane" />
+      <Button layoutX="845.0" layoutY="542.0" mnemonicParsing="false" onAction="#wyswietlPracownika" text="Wyświetl dane" />
+   </children>
+</Pane>
